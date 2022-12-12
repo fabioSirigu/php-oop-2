@@ -13,12 +13,13 @@ Il cliente effettua il pagamento dei prodotti nel carrello con la carta di credi
 
 require __DIR__ . '/Models/Product.php';
 require __DIR__ . '/Models/Category.php';
+require __DIR__ . '/Models/Type.php';
 
 $products = [
-      new Product('Cuccia Grande', 'Cuccia', 12, 'image', new Category('Cane')),
-      new Product('Crocchette', 'Cibo', 7, 'image', new Category('Cane')),
-      new Product('Palla', 'Gioco', 5, 'image', new Category('Cane')),
-      new Product('Lettiera', 'Accessori', 20, 'image', new Category('Gatto'))
+      new Product('Cuccia Grande', new Type('Cuccia'), 12, 'image', new Category('Cane')),
+      new Product('Crocchette', new Type('Cibo'), 7, 'image', new Category('Cane')),
+      new Product('Palla', new Type('Gioco'), 5, 'image', new Category('Cane')),
+      new Product('Lettiera', new Type('Accessori'), 20, 'image', new Category('Gatto'))
 ];
 
 ?>
@@ -47,7 +48,7 @@ $products = [
                                     <h5 class="text-danger text-uppercase">Name</h5>
                                     <h3><?= $product->name ?></h3>
                                     <h5 class="text-danger text-uppercase">Type:</h5>
-                                    <h3><?= $product->type ?></h3>
+                                    <h3><?= $product->type->type ?></h3>
                                     <h5 class="text-danger text-uppercase">Price:</h5>
                                     <h3><?= $product->price ?></h3>
                                     <h5 class="text-danger text-uppercase">Category:</h5>

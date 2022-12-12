@@ -9,7 +9,7 @@ class Product
       public $image;
       public $category;
 
-      public function __construct(String $name, String $type, Int $price, String $image, Category $category)
+      public function __construct(String $name, Type $type, Int $price, String $image, Category $category)
       {
             $this->name = $name;
             $this->type = $type;
