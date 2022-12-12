@@ -16,10 +16,14 @@ require __DIR__ . '/Models/Category.php';
 require __DIR__ . '/Models/Type.php';
 
 $products = [
-      new Product('Cuccia Grande', new Type('Cuccia'), 12, 'image', new Category('Cane')),
-      new Product('Crocchette', new Type('Cibo'), 7, 'image', new Category('Cane')),
-      new Product('Palla', new Type('Gioco'), 5, 'image', new Category('Cane')),
-      new Product('Lettiera', new Type('Accessori'), 20, 'image', new Category('Gatto'))
+      new Product('Cuccia Grande', new Type('Cuccia'), 12, 'https://picsum.photos/500?random=1', new Category('Cane')),
+      new Product('Crocchette', new Type('Cibo'), 7, 'https://picsum.photos/500?random=2', new Category('Cane')),
+      new Product('Palla', new Type('Gioco'), 5, 'https://picsum.photos/500?random=3', new Category('Cane')),
+      new Product('Lettiera', new Type('Accessori'), 20, 'https://picsum.photos/500?random=4', new Category('Gatto')),
+      new Product('Cuccia Grande', new Type('Cuccia'), 12, 'https://picsum.photos/500?random=5', new Category('Cane')),
+      new Product('Crocchette', new Type('Cibo'), 7, 'https://picsum.photos/500?random=6', new Category('Cane')),
+      new Product('Palla', new Type('Gioco'), 5, 'https://picsum.photos/500?random=7', new Category('Cane')),
+      new Product('Lettiera', new Type('Accessori'), 20, 'https://picsum.photos/500?random=8', new Category('Gatto'))
 ];
 
 ?>
@@ -53,7 +57,9 @@ $products = [
                                     <h3><?= $product->price ?></h3>
                                     <h5 class="text-danger text-uppercase">Category:</h5>
                                     <h3><?= $product->category->name ?></h3>
-
+                                    <div class="card_image">
+                                          <img class="w-100" src="<?= $product->image ?>" alt="">
+                                    </div>
                               </div>
                         </div>
                   <?php endforeach ?>
