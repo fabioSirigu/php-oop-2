@@ -31,10 +31,8 @@ $products = [
       <!-- BOOTSTRAP -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-      <!-- FONTAWESOME -->
-      <link href="https://kit.fontawesome.com/641e4c79bb.js" crossorigin="anonymous">
-      </link>
-      <title>Movies</title>
+
+      <title>Animals Products</title>
 </head>
 
 <body>
@@ -51,7 +49,7 @@ $products = [
                                     <h3><?= $product->price ?></h3>
                                     <h5 class="text-danger text-uppercase">Category:</h5>
 
-                                    <h3 v-if=""><?= $product->category ?></h3>
+                                    <h3><?= $product->category ?></h3>
 
                               </div>
                         </div>
@@ -59,6 +57,9 @@ $products = [
             </div>
       </div>
 
+      <!-- FONTAWESOME -->
+      <script src="https://kit.fontawesome.com/641e4c79bb.js" crossorigin="anonymous">
+      </script>
 </body>
 
 </html>

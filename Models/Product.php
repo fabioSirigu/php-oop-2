@@ -21,9 +21,9 @@ class Product
       public function set_category($category)
       {
             if ($category == 'Cane') {
-                  $this->category = $category;
+                  $this->category = '<i class="fa-solid fa-dog"></i>';
             } else if ($category == 'Gatto') {
-                  $this->category = $category;
+                  $this->category = '<i class="fa-solid fa-cat"></i>';
             }
       }
 
