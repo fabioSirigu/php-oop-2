@@ -26,6 +26,12 @@ $products = [
       new Product('Lettiera', new Type('Accessori'), 20, 'https://picsum.photos/500?random=8', new Category('Gatto'))
 ];
 
+try {
+      $try = new Category('ciao');
+} catch (Exception $e) {
+      echo "unable: " . $e->getMessage();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

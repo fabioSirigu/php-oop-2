@@ -1,9 +1,10 @@
 <?php
-
+require_once __DIR__ . '/../Traits/Weightable.php';
 
 class Product
 {
       public $name;
+      use Weitghtable;
       public $type;
       public $price;
       public $image;
